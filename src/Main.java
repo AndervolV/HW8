@@ -1,15 +1,41 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+import java.util.Arrays;
+
 public class Main {
     public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+// Задание 1
+        int[] box = new int[3];
+        box[0] = 1;
+        box[1] = 2;
+        box[2] = 3;
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
+        double[] box1 = {1.57, 7.654, 9.986};
+
+        char[] box2 = {'A', 'B', 'C', 'D', 'E', 'F'};
+
+// Задание 2
+        System.out.println(box[0] + ", " + box[1] + ", " + box[2]);
+        System.out.println(box1[0] + ", " + box1[1] + ", " + box1[2]);
+        System.out.println(Arrays.toString(box2));
+
+// Задание 3
+        System.out.println(box[2] + ", " + box[1] + ", " + box[0]);
+        System.out.println(box1[2] + ", " + box1[1] + ", " + box1[0]);
+        for (int i = box2.length - 1; i >= 0; i--) {
+            System.out.print(box2[i]);
+            if (i > 0) {
+                System.out.print(", ");
+            }
+        }
+        System.out.println();
+// Задание 4
+        int chet;
+        for (int i = 0; i < box.length; i++) {
+            if (box[i] % 2 != 0) {
+                chet = box[i] + 1;
+            } else {
+                chet = box[i];
+            }
+            System.out.print(chet + " ");
         }
     }
 }
